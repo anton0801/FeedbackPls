@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    tools:context=".presentation.ui.fragments.auth.enter_phone.EnterPhoneFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:text="@string/enter_phone_label"
+        android:textAppearance="@style/SansationLightAppearence"
+        android:textSize="@dimen/_12ssp" />
+
+    <br.com.sapereaude.maskedEditText.MaskedEditText
+        android:id="@+id/phone_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_18sdp"
+        android:background="@drawable/phone_input_bg"
+        android:hint="@string/number_phone_hint"
+        android:inputType="phone"
+        android:padding="@dimen/_12sdp"
+        android:textAppearance="@style/SansationLightAppearence"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hintColor"
+        android:textSize="@dimen/_14ssp"
+        app:allowed_chars="1234567890"
+        app:keep_hint="true"
+        app:mask="+7 (###) ### ##-##" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/privacy_policy_checkbox"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:background="@drawable/checkbox_background"
+            android:button="@drawable/checkbox_background"
+            android:minWidth="0dp"
+            android:minHeight="0dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/privacy_policy_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:text="@string/privacy_policy_text"
+            android:textAppearance="@style/SansationLightAppearence" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/operation_of_personal_data_checkbox"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:background="@drawable/checkbox_background"
+            android:button="@drawable/checkbox_background"
+            android:minWidth="0dp"
+            android:minHeight="0dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/operation_of_personal_data_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:text="@string/operation_of_personal_data_text"
+            android:textAppearance="@style/SansationLightAppearence" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.feedback.android.app.presentation.ui.views.BtnDropShadow
+        android:id="@+id/send_btn"
+        style="@style/BtnDropShadowStyle"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:gravity="center"
+        android:text="@string/send_text"
+        android:textAppearance="@style/SansationLightAppearence"
+        app:dropShadow="5"
+        app:dropWhenIsActive="true" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_36sdp"
+        android:visibility="gone" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

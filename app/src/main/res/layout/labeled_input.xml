@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_6sdp"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:textAppearance="@style/SansationLightAppearence"
+        android:textColor="@color/black"
+        tools:text="Фамилия: " />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_weight="1"
+        android:background="@drawable/bottom_input_underline"
+        android:padding="4dp"
+        android:textAppearance="@style/SansationLightAppearence"
+        android:textColor="@color/black"
+        tools:text="example text"
+        tools:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/input_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_weight="1"
+        android:textAppearance="@style/SansationLightAppearence"
+        android:textColor="#999999"
+        android:visibility="gone"
+        tools:text="same fixed value" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/birthday_select_container"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Spinner
+            android:id="@+id/spinner_day"
+            style="@style/SpinnerTheme"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="match_parent" />
+
+        <Spinner
+            android:id="@+id/spinner_month"
+            style="@style/SpinnerTheme"
+            android:layout_width="@dimen/_57sdp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_6sdp" />
+
+        <Spinner
+            android:id="@+id/spinner_year"
+            style="@style/SpinnerTheme"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_6sdp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

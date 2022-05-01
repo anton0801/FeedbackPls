@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_28sdp"
+    android:layout_marginTop="@dimen/_14sdp"
+    android:layout_marginEnd="@dimen/_28sdp"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tariff_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="@style/SansationBoldAppearence"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13ssp"
+        tools:text="Тариф “Ежемесячный”" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tariff_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="@style/SansationLightAppearence"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            tools:text="100 ₽" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tariff_payment_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="@style/SansationLightAppearence"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            tools:text=" / месяц" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tariff_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="@style/SansationLightAppearence"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12ssp"
+        tools:text="Аккаунт активируется бессрочно." />
+
+    <com.feedback.android.app.presentation.ui.views.BtnDropShadow
+        android:id="@+id/pay_or_extend_btn"
+        style="@style/BtnDropShadowStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingStart="@dimen/_14sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingEnd="@dimen/_14sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:text="@string/pay_text"
+        android:textAppearance="@style/SansationLightAppearence"
+        android:textColor="@color/black" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

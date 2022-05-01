@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_16sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_16sdp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/user_avatar_container"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_60sdp"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/user_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            tools:srcCompat="@drawable/ic_moderator_user_no_avatar" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/user_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textAppearance="@style/SansationLightAppearence"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toEndOf="@id/user_avatar_container"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="id00001" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/personal_page_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:text="@string/personal_page"
+        android:textAppearance="@style/SansationLightAppearence"
+        android:textColor="@color/link_color"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textAppearance="@style/SansationRegularAppearence"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toEndOf="@id/user_avatar_container"
+        app:layout_constraintTop_toBottomOf="@id/user_id"
+        tools:text="Дембицкий Сергей Сергеевич" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/user_tariff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textAppearance="@style/SansationLightAppearence"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toEndOf="@id/user_avatar_container"
+        app:layout_constraintTop_toBottomOf="@id/user_name"
+        tools:text="Тариф: Акционный" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/user_set_tariff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="@string/set_share_tariff_text"
+        android:textAppearance="@style/SansationLightAppearence"
+        android:textColor="@color/color_success"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toEndOf="@id/user_avatar_container"
+        app:layout_constraintTop_toBottomOf="@id/user_tariff" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/user_cancel_tariff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="@string/cancel"
+        android:textAppearance="@style/SansationLightAppearence"
+        android:textColor="@color/colorError"
+        android:textSize="@dimen/_10ssp"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/user_avatar_container"
+        app:layout_constraintTop_toBottomOf="@id/user_tariff" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="user_cancel_tariff,user_set_tariff" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/user_moderator_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:text="@string/moderator_label"
+        android:textAppearance="@style/SansationLightAppearence"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_9ssp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/user_status"
+        app:layout_constraintEnd_toStartOf="@id/user_status"
+        app:layout_constraintTop_toTopOf="@id/user_status" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/user_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/user_delete"
+        tools:src="@drawable/ic_user_unpublished" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/user_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_user_delete" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/user_registration_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textAppearance="@style/SansationLightAppearence"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toEndOf="@id/user_avatar_container"
+        app:layout_constraintTop_toBottomOf="@id/barrier_1"
+        tools:text="12 Октября 2022" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

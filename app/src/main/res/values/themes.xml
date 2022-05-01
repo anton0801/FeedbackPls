@@ -1,0 +1,46 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ОтзывПжлст" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorPrimary</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="BaseItemTextAppearence" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="SansationLightAppearence" parent="BaseItemTextAppearence">
+        <item name="fontFamily">@font/sansation_light</item>
+        <item name="android:fontFamily">@font/sansation_light</item>
+    </style>
+
+    <style name="SansationRegularAppearence" parent="BaseItemTextAppearence">
+        <item name="fontFamily">@font/sansation_regular</item>
+        <item name="android:fontFamily">@font/sansation_regular</item>
+    </style>
+
+    <style name="SansationBoldAppearence" parent="BaseItemTextAppearence">
+        <item name="fontFamily">@font/sansation_bold</item>
+        <item name="android:fontFamily">@font/sansation_bold</item>
+    </style>
+
+    <style name="SpinnerTheme" parent="android:Widget.Spinner">
+        <item name="android:background">@drawable/bg_spinner</item>
+    </style>
+
+    <style name="BtnDropShadowStyle">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?selectableItemBackgroundBorderless</item>
+    </style>
+</resources>

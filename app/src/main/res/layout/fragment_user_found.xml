@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.fragments.auth.user_found.UserFoundFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/user_found_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:gravity="center"
+        android:textAppearance="@style/SansationRegularAppearence"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Дембицкий Сергей Сергеевич" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/is_you_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:text="@string/is_you_text"
+        android:textAppearance="@style/SansationLightAppearence"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_found_name" />
+
+    <com.feedback.android.app.presentation.ui.views.BtnDropShadow
+        android:id="@+id/yes_btn"
+        style="@style/BtnDropShadowStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_22sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingTop="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_6sdp"
+        android:text="@string/yes_label"
+        android:textAppearance="@style/SansationLightAppearence"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintEnd_toStartOf="@id/no_btn"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/is_you_text" />
+
+    <com.feedback.android.app.presentation.ui.views.BtnDropShadow
+        android:id="@+id/no_btn"
+        style="@style/BtnDropShadowStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_22sdp"
+        android:paddingStart="@dimen/_12sdp"
+        android:paddingTop="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_12sdp"
+        android:paddingBottom="@dimen/_6sdp"
+        android:text="@string/no_label"
+        android:textAppearance="@style/SansationLightAppearence"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/yes_btn"
+        app:layout_constraintTop_toBottomOf="@id/is_you_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".presentation.ui.fragments.moderator.ModeratorFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tab_users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/moderator_cabinet_text"
+            android:textAppearance="@style/SansationBoldAppearence"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tab_change_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/change_pin"
+            android:textAppearance="@style/SansationLightAppearence"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tab_users" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/moderator_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tab_change_pin">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/title_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:text="@string/users_text"
+                    android:textAppearance="@style/SansationBoldAppearence"
+                    android:textSize="@dimen/_13ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/translate_to_excel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="end"
+                    android:text="@string/translate_to_excel_text"
+                    android:textAppearance="@style/SansationLightAppearence"
+                    android:textSize="@dimen/_10ssp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.feedback.android.app.presentation.ui.views.LabeledInput
+                android:id="@+id/search_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                app:backgroundResource="@drawable/border_bg"
+                app:inputHint="Начните вводить id"
+                app:labelText="Поиск по id:"
+                app:labelTextSize="@dimen/_4ssp"
+                app:layout_constraintTop_toBottomOf="@id/title_container" />
+
+            <com.feedback.android.app.presentation.ui.views.LabeledInput
+                android:id="@+id/search_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                app:backgroundResource="@drawable/border_bg"
+                app:inputHint="Начните вводить id"
+                app:labelText="Поиск по ФИО:"
+                app:labelTextSize="@dimen/_4ssp"
+                app:layout_constraintTop_toBottomOf="@id/search_id" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/users_rv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/search_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/change_pin_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tab_change_pin">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/current_pin_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:gravity="center"
+                android:text="@string/current_pin_text"
+                android:textAppearance="@style/SansationLightAppearence"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/current_pin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:gravity="center"
+                android:textAppearance="@style/SansationRegularAppearence"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/current_pin_label"
+                tools:text="0497" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/enter_new_pin_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:gravity="center"
+                android:text="@string/new_pin_text"
+                android:textAppearance="@style/SansationLightAppearence"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/current_pin" />
+
+            <com.mukesh.OtpView
+                android:id="@+id/new_pin_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:inputType="number"
+                android:itemBackground="@drawable/otp_item_bg"
+                android:textAppearance="@style/SansationLightAppearence"
+                android:textColor="@color/black"
+                app:OtpItemCount="4"
+                app:OtpItemSpacing="@dimen/_18sdp"
+                app:OtpLineColor="@android:color/transparent"
+                app:OtpViewType="line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/enter_new_pin_label"
+                tools:text="23" />
+
+            <com.feedback.android.app.presentation.ui.views.BtnDropShadow
+                android:id="@+id/save_new_pin_btn"
+                android:layout_width="@dimen/_170sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:gravity="center"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:text="@string/save_text"
+                style="@style/BtnDropShadowStyle"
+                android:textAppearance="@style/SansationLightAppearence"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/new_pin_input" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

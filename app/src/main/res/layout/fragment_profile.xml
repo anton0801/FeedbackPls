@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.ui.fragments.lk.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:gravity="center"
+            android:text="@string/profile_title"
+            android:textAppearance="@style/SansationRegularAppearence"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.feedback.android.app.presentation.ui.views.BtnDropShadow
+            android:id="@+id/create_profile"
+            style="@style/BtnDropShadowStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingStart="@dimen/_14sdp"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingEnd="@dimen/_14sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:text="@string/create_profile_label"
+            android:textAppearance="@style/SansationLightAppearence"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            tools:visibility="gone" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_12sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            tools:visibility="visible">
+
+            <FrameLayout
+                android:id="@+id/avatar_container"
+                android:layout_width="@dimen/_290sdp"
+                android:layout_height="@dimen/_190sdp"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="@dimen/_8sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/profile_avatar_bg"
+                        android:scaleType="centerCrop" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/no_have_user_avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:elevation="10dp"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="@string/add_image_label"
+                    android:textColor="#999999" />
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/my_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:gravity="center"
+                android:textAppearance="@style/SansationLightAppearence"
+                android:textColor="@color/link_color"
+                app:layout_constraintTop_toBottomOf="@id/avatar_container"
+                tools:text="https://оставьте-мне-отзыв.рф/id0000001" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/edit_profile_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_48sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:tag="0"
+                android:text="@string/edit_profile_text"
+                android:textAppearance="@style/SansationLightAppearence"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/avatar_container"
+                app:layout_constraintTop_toBottomOf="@id/my_url" />
+
+            <View
+                android:id="@+id/separator_1"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/edit_profile_tab"
+                app:layout_constraintStart_toEndOf="@id/edit_profile_tab"
+                app:layout_constraintTop_toTopOf="@id/edit_profile_tab" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/send_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:tag="1"
+                android:text="@string/send_link"
+                android:textAppearance="@style/SansationLightAppearence"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/separator_1"
+                app:layout_constraintTop_toBottomOf="@id/my_url" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/change_pin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:tag="2"
+                android:text="@string/change_pin"
+                android:textAppearance="@style/SansationLightAppearence"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/edit_profile_tab"
+                app:layout_constraintTop_toBottomOf="@id/edit_profile_tab" />
+
+            <View
+                android:id="@+id/separator_2"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/change_pin"
+                app:layout_constraintStart_toEndOf="@id/change_pin"
+                app:layout_constraintTop_toTopOf="@id/change_pin" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tariffs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:tag="3"
+                android:text="@string/tariffs_label"
+                android:textAppearance="@style/SansationLightAppearence"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/separator_2"
+                app:layout_constraintTop_toBottomOf="@id/edit_profile_tab" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/edit_profile_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/change_pin">
+
+                <com.feedback.android.app.presentation.ui.views.LabeledInput
+                    android:id="@+id/surname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    app:labelText="@string/surname_label"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.feedback.android.app.presentation.ui.views.LabeledInput
+                    android:id="@+id/first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    app:labelText="@string/first_name_label"
+                    app:layout_constraintTop_toBottomOf="@id/surname" />
+
+                <com.feedback.android.app.presentation.ui.views.LabeledInput
+                    android:id="@+id/last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    app:labelText="@string/last_name_label"
+                    app:layout_constraintTop_toBottomOf="@id/first_name" />
+
+                <com.feedback.android.app.presentation.ui.views.LabeledInput
+                    android:id="@+id/profession"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    app:labelText="@string/profession_label"
+                    app:layout_constraintTop_toBottomOf="@id/last_name" />
+
+                <com.feedback.android.app.presentation.ui.views.LabeledInput
+                    android:id="@+id/phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    app:canModify="false"
+                    app:labelText="@string/phone_label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/profession"
+                    tools:inputValue="+7 962 957 11 32" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/have_whatsapp_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="@id/phone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/phone"
+                    app:layout_constraintTop_toTopOf="@id/phone">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/have_whatsapp_checkbox"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:background="@drawable/checkbox_background"
+                        android:button="@drawable/checkbox_background"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/operation_of_personal_data_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:drawableEnd="@drawable/ic_whatsapp"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:text="@string/have_whatsapp_text"
+                        android:textAppearance="@style/SansationLightAppearence" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <com.feedback.android.app.presentation.ui.views.LabeledInput
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    app:inputValueColor="@color/link_color"
+                    app:inputValueTextModification="underline"
+                    app:labelText="@string/email_label"
+                    app:layout_constraintTop_toBottomOf="@id/phone"
+                    tools:inputValue="https://оставьте-мне-отзыв.рф/id0000001" />
+
+                <com.feedback.android.app.presentation.ui.views.LabeledInput
+                    android:id="@+id/my_link_website"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    app:canModify="true"
+                    app:inputValueColor="@color/link_color"
+                    app:inputValueTextModification="underline"
+                    app:labelText="@string/website_label"
+                    app:layout_constraintTop_toBottomOf="@id/email"
+                    tools:inputValue="https://оставьте-мне-отзыв.рф/id0000001" />
+
+                <com.feedback.android.app.presentation.ui.views.LabeledInput
+                    android:id="@+id/birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    app:canModify="false"
+                    app:inputValueTextModification="select_birthday"
+                    app:labelText="День рождения"
+                    app:layout_constraintTop_toBottomOf="@id/my_link_website" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/title_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:text="@string/your_title_label"
+                    android:textAppearance="@style/SansationBoldAppearence"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintTop_toBottomOf="@id/birthday" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/title_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:background="@drawable/bottom_input_underline"
+                    android:padding="4dp"
+                    android:textAppearance="@style/SansationLightAppearence"
+                    android:textColor="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/title_label"
+                    tools:text="example text" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/about_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:text="@string/about_label"
+                    android:textAppearance="@style/SansationBoldAppearence"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintTop_toBottomOf="@id/title_input" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/about_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:background="@drawable/border_bg"
+                    android:gravity="start"
+                    android:inputType="textMultiLine"
+                    android:padding="4dp"
+                    android:textAppearance="@style/SansationLightAppearence"
+                    android:textColor="@color/black"
+                    app:layout_constraintHeight_min="@dimen/_80sdp"
+                    app:layout_constraintTop_toBottomOf="@id/about_label"
+                    tools:text="example about text" />
+
+                <com.feedback.android.app.presentation.ui.views.BtnDropShadow
+                    android:id="@+id/send_btn"
+                    style="@style/BtnDropShadowStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:paddingStart="@dimen/_20sdp"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingEnd="@dimen/_20sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:text="@string/send_profile_data_text"
+                    android:textAppearance="@style/SansationLightAppearence"
+                    android:textSize="@dimen/_15ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/about_input" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/error_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:gravity="center"
+                    android:text="@string/error_send_profile_data_text"
+                    android:textAppearance="@style/SansationLightAppearence"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/send_btn" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/send_link_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/change_pin">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/change_pin_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/change_pin">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/current_pin_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:gravity="center"
+                    android:text="@string/current_pin_text"
+                    android:textAppearance="@style/SansationLightAppearence"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/current_pin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:gravity="center"
+                    android:textAppearance="@style/SansationRegularAppearence"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/current_pin_label"
+                    tools:text="0497" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/enter_new_pin_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:gravity="center"
+                    android:text="@string/new_pin_text"
+                    android:textAppearance="@style/SansationLightAppearence"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/current_pin" />
+
+                <com.mukesh.OtpView
+                    android:id="@+id/new_pin_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:inputType="number"
+                    android:itemBackground="@drawable/otp_item_bg"
+                    android:textAppearance="@style/SansationLightAppearence"
+                    android:textColor="@color/black"
+                    app:OtpItemCount="4"
+                    app:OtpItemSpacing="@dimen/_18sdp"
+                    app:OtpLineColor="@android:color/transparent"
+                    app:OtpViewType="line"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/enter_new_pin_label"
+                    tools:text="23" />
+
+                <com.feedback.android.app.presentation.ui.views.BtnDropShadow
+                    android:id="@+id/save_new_pin_btn"
+                    style="@style/BtnDropShadowStyle"
+                    android:layout_width="@dimen/_170sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_6sdp"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:text="@string/save_text"
+                    android:textAppearance="@style/SansationLightAppearence"
+                    android:textSize="@dimen/_15ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/new_pin_input" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tariffs_container"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/change_pin"
+                tools:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tariff_plan_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:gravity="center"
+                    android:text="@string/you_account_text"
+                    android:textAppearance="@style/SansationLightAppearence"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/not_activated_account_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/tariff_plan_label">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/not_activated_text"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/SansationBoldAppearence"
+                        android:textColor="@color/colorError"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:gravity="start"
+                        android:text="@string/not_activated_description_text"
+                        android:textAppearance="@style/SansationLightAppearence"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        app:lineHeight="@dimen/_12sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/activated_account_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/tariff_plan_label"
+                    tools:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tariff_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textAppearance="@style/SansationBoldAppearence"
+                        android:textColor="@color/color_success"
+                        android:textSize="@dimen/_15ssp"
+                        tools:text="на тарифе “Ежемесячный”" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tariff_expiration_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:gravity="center"
+                        android:textAppearance="@style/SansationBoldAppearence"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14ssp"
+                        tools:text="до: 25.03.2022" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tariff_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:gravity="start"
+                        android:text="@string/not_activated_description_text"
+                        android:textAppearance="@style/SansationLightAppearence"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_9ssp"
+                        android:visibility="gone"
+                        app:lineHeight="@dimen/_12sdp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/select_tariff_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:gravity="center"
+                        android:text="@string/select_tariff_text"
+                        android:textAppearance="@style/SansationLightAppearence"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        app:lineHeight="@dimen/_12sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/tariff_barrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="not_activated_account_container,activated_account_container" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tariffs_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tariff_barrier" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation.xml"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/enterPhoneFragment"
+        android:name="com.feedback.android.app.presentation.ui.fragments.auth.enter_phone.EnterPhoneFragment"
+        android:label="fragment_enter_phone"
+        tools:layout="@layout/fragment_enter_phone">
+        <action
+            android:id="@+id/action_enterPhoneFragment_to_userFoundFragment"
+            app:destination="@id/userFoundFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_enterPhoneFragment_to_enterPinCodeFragment"
+            app:destination="@id/enterPinCodeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFoundFragment"
+        android:name="com.feedback.android.app.presentation.ui.fragments.auth.user_found.UserFoundFragment"
+        android:label="fragment_user_found"
+        tools:layout="@layout/fragment_user_found">
+        <argument
+            android:name="userId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="userName"
+            app:argType="string"
+            android:defaultValue='""' />
+        <action
+            android:id="@+id/action_userFoundFragment_to_enterPinCodeFragment"
+            app:destination="@id/enterPinCodeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <argument
+            android:name="userPhone"
+            app:argType="string"
+            android:defaultValue='""' />
+        <action
+            android:id="@+id/action_userFoundFragment_to_enterPhoneFragment"
+            app:destination="@id/enterPhoneFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterPinCodeFragment"
+        android:name="com.feedback.android.app.presentation.ui.fragments.auth.enter_pin_code.EnterPinCodeFragment"
+        android:label="fragment_enter_pin_code"
+        tools:layout="@layout/fragment_enter_pin_code">
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+        <argument
+            android:name="userPhone"
+            app:argType="string" />
+        <argument
+            android:name="isRegister"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_enterPinCodeFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_enterPinCodeFragment_to_moderatorFragment"
+            app:destination="@id/moderatorFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <argument
+            android:name="isUserRecognizedAccount"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.feedback.android.app.presentation.ui.fragments.splash.SplashFragment"
+        android:label="SplashFragment">
+        <action
+            android:id="@+id/action_splashFragment_to_enterPhoneFragment"
+            app:destination="@id/enterPhoneFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_splashFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_splashFragment_to_moderatorFragment"
+            app:destination="@id/moderatorFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_splashFragment_to_userFoundFragment"
+            app:destination="@id/userFoundFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.feedback.android.app.presentation.ui.fragments.lk.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/moderatorFragment"
+        android:name="com.feedback.android.app.presentation.ui.fragments.moderator.ModeratorFragment"
+        android:label="fragment_moderator"
+        tools:layout="@layout/fragment_moderator" />
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.feedback.android.app.presentation.ui.fragments.lk.webview.WebViewFragment"
+        android:label="fragment_web_view"
+        tools:layout="@layout/fragment_web_view" >
+        <argument
+            android:name="url"
+            app:argType="string" />
+        <argument
+            android:name="user_id"
+            app:argType="integer" />
+        <argument
+            android:name="tariff_id"
+            app:argType="integer" />
+    </fragment>
+</navigation>

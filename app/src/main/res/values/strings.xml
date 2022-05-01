@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Отзыв, пжлст!</string>
+    <string name="toolbar_title">Оставьте мне отзыв, пожалуйста!</string>
+
+    <string name="enter_phone_label">Введите номер Вашего мобильного телефона</string>
+    <string name="number_phone_hint"> ___ ___ - __ - __</string>
+    <string name="privacy_policy_text">Политика конфиденциальности</string>
+    <string name="operation_of_personal_data_text">Пользовательское соглашение</string>
+    <string name="send_text">Отправить</string>
+    <string name="is_you_text">это Вы?</string>
+    <string name="yes_label">Да</string>
+    <string name="no_label">Нет</string>
+
+    <string name="pin_code_label">Введите свой ПИН-код</string>
+    <string name="error_pin_code_label">Введен неверный ПИН-код</string>
+    <string name="forgot_pin_code">Забыли ПИН-код?</string>
+    <string name="greetings_label">Привет, %s!</string>
+    <string name="profile_title">Личный кабинет профессионала</string>
+    <string name="create_profile_label">Создать персональную страницу</string>
+    <string name="add_image_label">добавить фото\n или\n сфотографироваться</string>
+    <string name="edit_profile_text">Редактировать</string>
+    <string name="send_link">Отправить ссылку</string>
+    <string name="change_pin">Сменить ПИН</string>
+    <string name="tariffs_label">Тарифы</string>
+    <string name="surname_label">Фамилия</string>
+    <string name="first_name_label">Имя</string>
+    <string name="last_name_label">Отчество</string>
+    <string name="profession_label">Профессия</string>
+    <string name="phone_label">Телефон</string>
+    <string name="have_whatsapp_text">Есть whatsapp?</string>
+    <string name="email_label">Емайл</string>
+    <string name="website_label">Сайт</string>
+    <string name="your_title_label">Ваш заголовок</string>
+    <string name="about_label">Ваш текст</string>
+    <string name="send_profile_data_text">Опубликовать</string>
+    <string name="error_send_profile_data_text">Пожалуйста, заполните выделенные <font color="#FF0000">красным</font> поля. Они обязательны для публикации Вашей персональной страницы</string>
+    <string name="current_pin_text">Текущий ПИН-код</string>
+    <string name="new_pin_text">Введите новый ПИН-код</string>
+    <string name="save_text">Сохранить</string>
+    <string name="you_account_text">Ваш аккаунт:</string>
+    <string name="not_activated_text">не активирован</string>
+    <string name="not_activated_description_text">Примечание! В настоящий момент пользователям Вашей персональной страницы доступен только последний оставленный Вам отзыв. Все остальные отзывы, Ваши контакты и персональная информация скрыты. Оплатите пользовательскую лицензию в соответствии с одним из тарифов, чтобы открыть полный доступ к Вашей персональной странице, всем отзывам, контактам и персональной информации.</string>
+    <string name="select_tariff_text">Выберите подходящий тариф:</string>
+    <string name="extend_text">Продлить</string>
+    <string name="pay_text">Оплатить</string>
+    <string name="endless_tariff_active_text">активирован бессрочно</string>
+    <string name="selected_tariff_text">на тарифе “%s”</string>
+    <string name="selected_tariff_date_expiration">до: %s</string>
+    <string name="resend_code_text">Запросить ПИН-код повторно</string>
+    <string name="enter_pin_code_title">Введите ПИН-код</string>
+    <string name="moderator_cabinet_text">Кабинет модератора</string>
+    <string name="users_text">Пользователи</string>
+    <string name="translate_to_excel_text">Выгрузить базу в Excel</string>
+    <string name="personal_page">Персональная страница</string>
+    <string name="set_share_tariff_text">установить Акционный</string>
+    <string name="cancel">Отмена</string>
+
+    <string name="pin_code_desc_text">В течение нескольких секунд Вам поступит звонок. На него не обязательно отвечать. \n\nПоследние 4 цифры входящего номера - это Ваш ПИН-код. Введите его. \n\nВам не надо его запоминать. После авторизации Вы сможете изменить его на любой удобный для Вас.</string>
+    <string name="moderator_label">Модератор</string>
+</resources>

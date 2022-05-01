@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/active_btn_state.xml" value="0.22962962962962963" />
+        <entry key="app/src/main/res/drawable/bg_spinner.xml" value="0.16527777777777777" />
+        <entry key="app/src/main/res/drawable/border_bg.xml" value="0.22962962962962963" />
+        <entry key="app/src/main/res/drawable/bottom_input_underline.xml" value="0.22962962962962963" />
+        <entry key="app/src/main/res/drawable/checkbox_background.xml" value="0.22962962962962963" />
+        <entry key="app/src/main/res/drawable/checkbox_off_background.xml" value="0.22962962962962963" />
+        <entry key="app/src/main/res/drawable/error_border_bg.xml" value="0.16527777777777777" />
+        <entry key="app/src/main/res/drawable/error_bottom_input_underline.xml" value="0.16527777777777777" />
+        <entry key="app/src/main/res/drawable/error_btn_state.xml" value="0.17222222222222222" />
+        <entry key="app/src/main/res/drawable/error_profile_avatar_bg.xml" value="0.22962962962962963" />
+        <entry key="app/src/main/res/drawable/ic_arrow_down.xml" value="0.16527777777777777" />
+        <entry key="app/src/main/res/drawable/ic_checkbox_checked.xml" value="0.22962962962962963" />
+        <entry key="app/src/main/res/drawable/ic_user_delete.xml" value="0.15763888888888888" />
+        <entry key="app/src/main/res/drawable/in_active_btn_state.xml" value="0.22962962962962963" />
+        <entry key="app/src/main/res/drawable/otp_item_bg.xml" value="0.18385416666666668" />
+        <entry key="app/src/main/res/drawable/phone_input_bg.xml" value="0.22962962962962963" />
+        <entry key="app/src/main/res/drawable/profile_avatar_bg.xml" value="0.22962962962962963" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/dropdown_item.xml" value="0.19381107491856678" />
+        <entry key="app/src/main/res/layout/fragment_enter_phone.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_enter_pin_code.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_moderator.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.19381107491856678" />
+        <entry key="app/src/main/res/layout/fragment_user_found.xml" value="0.30512820512820515" />
+        <entry key="app/src/main/res/layout/fragment_web_view.xml" value="0.1868421052631579" />
+        <entry key="app/src/main/res/layout/labeled_input.xml" value="0.30512820512820515" />
+        <entry key="app/src/main/res/layout/moderator_user_list_item.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/tariff_list_item.xml" value="0.19381107491856678" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
